@@ -1,0 +1,15 @@
+quarkus:
+  datasource:
+    db-kind: postgresql
+    reactive:
+      url: vertx-reactive:postgresql://postgres:postgres@localhost:5432/coba-quarkus
+    jdbc: false
+  http:
+    port: 8081
+  hibernate-orm:
+      database:
+        generation: drop-and-create
+  log:
+    category:
+      "io.quarkus.category":
+        level: INFO
